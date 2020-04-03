@@ -1,0 +1,22 @@
+
+$name=$file['name'];
+
+
+$ext=explode('.',$name);
+$allowedext=array('jpg','jpeg','png');
+$actualext=strtolower($ext[1]);
+if(in_array($actualext,$allowedext))
+{
+if($size<100000)
+{
+$namenew=uniqid('',true);
+move_uploaded_file();
+
+}
+else echo "file size exceeded";
+
+}
+else
+{
+echo"format not supported";
+}
